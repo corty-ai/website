@@ -1,5 +1,6 @@
-import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,12 +18,18 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="/about" className="text-gray-300 hover:text-white transition-colors">
+            <Link
+              to="/about"
+              className="text-gray-300 hover:text-white transition-colors"
+            >
               About
-            </a>
-            <a href="/contact" className="text-gray-300 hover:text-white transition-colors">
+            </Link>
+            <Link
+              to="/contact"
+              className="text-gray-300 hover:text-white transition-colors"
+            >
               Contact
-            </a>
+            </Link>
           </nav>
 
           {/* Mobile menu button */}
@@ -31,7 +38,11 @@ const Header = () => {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800/50 transition-colors"
             >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -39,13 +50,19 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-800/50">
-            <nav className="flex flex-col space-y-4">
-              <a href="/about" className="text-gray-300 hover:text-white transition-colors">
+            <nav className="hidden md:flex items-center space-x-8">
+              <Link
+                to="/about"
+                className="text-gray-300 hover:text-white transition-colors"
+              >
                 About
-              </a>
-              <a href="/contact" className="text-gray-300 hover:text-white transition-colors">
+              </Link>
+              <Link
+                to="/contact"
+                className="text-gray-300 hover:text-white transition-colors"
+              >
                 Contact
-              </a>
+              </Link>
             </nav>
           </div>
         )}

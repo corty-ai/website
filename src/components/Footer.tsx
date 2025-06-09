@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="bg-black border-t border-gray-800/50">
@@ -7,33 +9,38 @@ const Footer = () => {
           {/* Company Info */}
           <div className="md:col-span-3">
             <div className="mb-4">
-              <span className="text-lg font-bold text-white font-space">Corty</span>
+              <span className="text-lg font-bold text-white font-space">
+                Corty
+              </span>
             </div>
             <p className="text-gray-400 mb-6 max-w-lg leading-relaxed text-sm">
-              Revolutionizing software development with AI-powered code intelligence. 
-              Helping teams understand, navigate, and collaborate on complex codebases faster than ever before.
+              Revolutionizing software development with AI-powered code
+              intelligence. Helping teams understand, navigate, and collaborate
+              on complex codebases faster than ever before.
             </p>
           </div>
 
           {/* Company Links */}
           <div className="md:col-span-1">
-            <h4 className="font-semibold text-white mb-4 font-space text-sm">Company</h4>
+            <h4 className="font-semibold text-white mb-4 font-space text-sm">
+              Company
+            </h4>
             <ul className="space-y-3">
               <li>
-                <a
-                  href="/about"
+                <Link
+                  to="/about"
                   className="text-gray-400 hover:text-white transition-colors text-sm"
                 >
                   About
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/contact"
+                <Link
+                  to="/contact"
                   className="text-gray-400 hover:text-white transition-colors text-sm"
                 >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -45,7 +52,9 @@ const Footer = () => {
             © 2025 Corty. All rights reserved.
           </div>
           <div className="flex items-center space-x-4 mt-3 md:mt-0">
-            <span className="text-gray-400 text-sm">Made with ❤️ for developers</span>
+            <span className="text-gray-400 text-sm">
+              Made with ❤️ for developers
+            </span>
           </div>
         </div>
       </div>
