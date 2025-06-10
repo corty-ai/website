@@ -25,7 +25,7 @@ function HomePage() {
 function App() {
   return (
     <ThemeProvider>
-      <Router basename="/website">
+      <Router basename="/">
         <div className="min-h-screen bg-black">
           <Routes>
             <Route path="/" element={<HomePage />} />
